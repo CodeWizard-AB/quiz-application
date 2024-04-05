@@ -6,8 +6,10 @@ import "./index.css";
 import HomePage from "./Pages/HomePage.jsx";
 import Login from "./Pages/Login.jsx";
 import Signup from "./Pages/Signup.jsx";
+import QuizPage from "./Pages/QuizPage.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ResultPage from "./Pages/ResultPage.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
 		errorElement: <div>error</div>,
 		children: [
 			{
-				index: true,
+				index: "/",
 				element: <HomePage />,
 			},
 			{
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
 			{
 				path: "signup",
 				element: <Signup />,
+			},
+			{
+				path: "quiz",
+				element: <QuizPage />,
+			},
+			{
+				path: "result",
+				element: <ResultPage />,
 			},
 		],
 	},
